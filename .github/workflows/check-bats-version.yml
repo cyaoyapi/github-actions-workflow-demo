@@ -1,0 +1,12 @@
+name: Check BATS(Bash Automatisation Tesing System)
+on: push
+jobs:
+  CheckBATSVersion:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - run: npm install -g bats
+      - run: bats -V 

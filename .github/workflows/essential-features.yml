@@ -1,0 +1,11 @@
+name: GitHub Actions Essential Features
+on: push
+jobs:
+  CustomisedVariables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PostgresSQL Parameters
+        run: echo "The postgres database name is $POSTGRES_DB and the user is $POSTGRES_USER"
+        env:
+          POSTGRES_DB: app_db
+          POSTGRES_USER: admin

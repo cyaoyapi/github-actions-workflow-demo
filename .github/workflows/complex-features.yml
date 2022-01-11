@@ -9,5 +9,4 @@ jobs:
           MY_SAVIOR: ${{ secrets.MY_SAVIOR }}
         env:
           MY_GOD: ${{ secrets.MY_GOD }}
-        run: |
-          echo "My God is $MY_GOD and my Savior is also $MY_SAVIOR ."
+        run: echo "My God is $MY_GOD and my Savior is also $MY_SAVIOR ."

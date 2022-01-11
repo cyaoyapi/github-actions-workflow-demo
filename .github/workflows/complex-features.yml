@@ -4,9 +4,8 @@ jobs:
   UseSecrets:
     runs-on: ubuntu-latest
     steps:
-      - name: Get and use secrets 
-        with:
-          MY_SAVIOR: ${{ secrets.MY_SAVIOR }}
+      - shell: bash
         env:
-          MY_GOD: ${{ secrets.MY_GOD }}
-        run: echo "My God is $MY_GOD and my Savior is also $MY_SAVIOR ."
+          MY_SAVIOR: ${{ secrets.MY_SAVIOR }}
+        run: |
+          echo "$MY_SAVIOR"

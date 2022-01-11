@@ -9,3 +9,17 @@ jobs:
           MY_SAVIOR: ${{ secrets.MY_SAVIOR }}
         run: |
           echo "$MY_SAVIOR"
+  Setup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Setup server."
+  Build:
+    needs: Setup
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Build the program."
+  Test:
+    needs: Build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Test the program."
